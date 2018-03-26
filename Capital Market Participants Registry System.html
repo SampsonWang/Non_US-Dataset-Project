@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://cmprs.sec.gov.ph/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="language" content="en">
+
+<link rel="icon" type="image/ico" sizes="16x16" href="http://cmprs.sec.gov.ph/images/logo.ico">
+    <!--     Font Awesome     -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="./Capital Market Participants Registry System_files/font-awesome.min.css" rel="stylesheet">
+		
+    <!-- <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css' rel='stylesheet' type='text/css'> -->
+		
+		<!-- <link rel="stylesheet" type="text/css" href="/css/swal_main/sweetalert2.css"> -->
+		
+		
+		<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/sweetalert2.min.css">
+		
+
+
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all"> -->
+		<link href="./Capital Market Participants Registry System_files/animate2.css" rel="stylesheet" media="all">
+
+	<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/styles.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/css/navbar.css"> -->
+	<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/footer.css">
+	<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/carousel.css">
+	<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/animate.css">
+	<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/bootstrap-flat.css">
+	<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/bootstrap-flat-extras.css">
+
+
+	<!-- <link rel="stylesheet" type="text/css" href="/assets/CreativeLinkEffects/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/assets/CreativeLinkEffects/css/demo.css">
+	<link rel="stylesheet" type="text/css" href="/assets/CreativeLinkEffects/css/component.css"> -->
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/bootstrap-yii.css">
+<link rel="stylesheet" type="text/css" href="./Capital Market Participants Registry System_files/jquery-ui-bootstrap.css">
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/bootstrap-noconflict.js.download"></script>
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/bootbox.min.js.download"></script>
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/notify.min.js.download"></script><style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+  font-weight: bold;
+  padding: 8px 15px 8px 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: 3px 7px;
+}
+.notifyjs-bootstrap-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border-color: #EED3D7;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+}
+.notifyjs-bootstrap-info {
+  color: #3A87AD;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-warn {
+  color: #C09853;
+  background-color: #FCF8E3;
+  border-color: #FBEED5;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+}
+</style>
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/jquery.ba-bbq.min.js.download"></script>
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/jquery.yiiactiveform.js.download"></script>
+<title>Capital Market Participants Registry System</title>
+
+<style type="text/css" id="core-notify">.notifyjs-corner {
+  position: fixed;
+  margin: 5px;
+  z-index: 1050;
+}
+
+.notifyjs-corner .notifyjs-wrapper,
+.notifyjs-corner .notifyjs-container {
+  position: relative;
+  display: block;
+  height: inherit;
+  width: inherit;
+  margin: 3px;
+}
+
+.notifyjs-wrapper {
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+
+.notifyjs-container {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+}
+
+[data-notify-text],[data-notify-html] {
+  position: relative;
+}
+
+.notifyjs-arrow {
+  position: absolute;
+  z-index: 2;
+  width: 0;
+  height: 0;
+}</style></head>
+
+<body class="modal-open" style="">
+	<div class="container-fluid" id="bannerMain">
+		<div class="row" align="center">
+			<img src="./Capital Market Participants Registry System_files/banner_cmprs.png" class="img-responsive">
+		</div>
+	</div>
+	  <nav class="navbar navbar-default-sec navbar-default">
+	    <div class="container">
+	      <div class="navbar-header">
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar9">
+	          <span class="sr-only">Toggle navigation</span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
+					 <div>
+					 	<!-- <a class="navbar-brand visible-lg" href="/index.php"><span data-hover="Capital Market Participants Registry System">Capital Market Participants Registry System</span></a> -->
+				 	</div>
+					<div>
+					 <a class="navbar-brand hidden-lg" href="http://cmprs.sec.gov.ph/index.php">CMPRS</a>
+					 <!-- <a class="navbar-brand" href="/index.php">CMPRS</a> -->
+				 </div>
+	      </div>
+
+
+	      <div id="navbar9" class="navbar-collapse collapse">
+	        <!-- <ul class="nav navbar-nav navbar-left">
+						<li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Institutions <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="/index.php/institution/new">New Application</a></li>
+		            <li><a href="/index.php/branch">Branch Application</a></li>
+		            <li><a href="/index.php/annualPayment">Annual Payment</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="/index.php/noticeOfTermination">Submit Notice of Termination</a></li>
+		          </ul>
+		        </li>
+						<li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Professionals <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="/index.php/professional/new?type=FirstTimeRegistrant">First Time Registrant</a></li>
+		            <li><a href="/index.php/professional/new?type=Transferee">Transferee / Change in Employer</a></li>
+		            <li><a href="/index.php/professional/new?type=Returnee">Returnee</a></li>
+		          </ul>
+		        </li>
+	        </ul> -->
+	        <!-- <ul class="nav navbar-nav navbar-right">
+
+	          <li><a href="#">List of Fees</a></li>
+	          <li><a href="#">Downloadable Forms</a></li>
+	        </ul> -->
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li><p class="navbar-text">Already have an account?</p></li> -->
+						<li><a href="http://www.sec.gov.ph/wp-content/uploads/2017/03/2017MCno03-new2.pdf" target="_blank"><i class="fa fa-gg-circle fa-fw"></i>List of Fees</a></li>
+						 <li><a href="http://www.sec.gov.ph/forms-and-fees/capital-market-professionals/" target="_blank"><i class="fa fa-file-text-o fa-fw"></i>Downloadable Forms / User Guide</a></li>
+												<li>
+						<a href="http://cmprs.sec.gov.ph/index.php/accountRequest"><i class="fa fa-id-card-o fa-fw"></i> Request for an Account</a>
+						</li>
+						<li class="dropdown">
+							<a href="http://cmprs.sec.gov.ph/#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-location-arrow fa-fw"></i>Company User Login <span class="caret"></span></a>
+							<ul id="login-dp" class="dropdown-menu">
+								<li>
+									<div class="row">
+										<div class="col-md-12">
+											<!-- <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav"> -->
+
+												<div class="portlet" id="yw6">
+<div class="portlet-content">
+<!-- Standard HTML form.
+ If you want to display error message on the same page where you tried loging in then do not specify the form action! -->
+<div class="form">
+  <form class="form" id="login-form" action="http://cmprs.sec.gov.ph/" method="post">  <!--  -->
+                <div class="input-group">
+          <label class="sr-only" for="LoginForm_email">Email address</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="email" class="form-control" name="LoginForm[username]" id="LoginForm_username" placeholder="Email address" required="">
+
+          <!-- <div class="form-group"><label class="control-label required" for="LoginForm_username">Username <span class="required">*</span></label><input class="form-control" placeholder="Username" name="LoginForm[username]" id="LoginForm_username" type="text" /><div class="help-block error" id="LoginForm_username_em_" style="display:none"></div></div> -->
+        </div>
+        <br>
+        <div class="input-group">
+          <label class="sr-only" for="LoginForm_password">Password</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" class="form-control" name="LoginForm[password]" id="LoginForm_password" placeholder="Password" required="">
+
+          <!-- <div class="form-group"><label class="control-label required" for="LoginForm_password">Password <span class="required">*</span></label><input class="form-control" placeholder="Password" name="LoginForm[password]" id="LoginForm_password" type="text" /><div class="help-block error" id="LoginForm_password_em_" style="display:none"></div></div> -->
+        </div>
+        <div class="help-block error" id="LoginForm_password_em_" style="display:none;color:red;text-align:center;font-weight:bold;"></div>
+        <div class="clearfix"></div>
+        <div class="help-block text-right"><a href="http://cmprs.sec.gov.ph/index.php/account/forgotPassword">Forget the password ?</a></div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block" id="login">Sign in</button>
+
+
+        </div>
+
+
+        </form></div>
+</div>
+</div>												<!-- <div class="checkbox">
+													<label>
+														<input type="checkbox" /> keep me logged-in
+													</label>
+												</div> -->
+
+											<!-- </form> -->
+										</div>
+										<!-- <div class="bottom text-center">
+												<a href="/index.php/accountRequest" >Request for an Account</a>
+										</div> -->
+									</div>
+								</li>
+							</ul>
+						</li>
+										</ul>
+	      </div>
+	      <!--/.nav-collapse -->
+	    </div>
+	    <!--/.container-fluid -->
+	  </nav>
+
+	<!-- <section class="first">
+	  <div class="container">
+			<div class="text-center" style="padding-top:210px">
+	    	<button id="startSearch" class="btn btn-primary btn-lg"><i class="fa fa-search"></i>   Click Here to Search</button>
+			</div>
+	  </div>
+	</section> -->
+
+
+<!-- main -->
+<div class="main">
+    <div class="container tim-container">
+
+		
+<!-- notice 
+<div class="label-info" style="padding:10px;font-size:15px"><span class="required h3">Temporay System Maintenance Notice: </span><br>Please be informed that we will be performing system maintenance and upgrades on January 24, 2018, Wednesday at 7:00AM to 9:00AM. As a result, the website will be temporarily out of service. We apologize for the inconvenience, and we appreciate your patience and understanding.</div><br>
+<!-- notice -->
+
+		<div id="content">
+	
+<div class="marketing">
+  <!-- <div class="jumbotron"><h1>Capital Market Participants</h1></div> -->
+<div id="yw0"></div><h2 class="text-center">Registered Capital Market Participants</h2>
+<!-- <hr/> -->
+<br>
+</div>
+<div class="clearfix"></div>
+<div class="cmpSearch" id="yw3"><ul id="yw4" class="nav nav-tabs nav-justified">
+<li class="active">
+<a data-toggle="tab" href="http://cmprs.sec.gov.ph/#yw3_tab_1">Institutions</a></li>
+<li class="">
+<a data-toggle="tab" href="http://cmprs.sec.gov.ph/#yw3_tab_2">Professionals</a></li>
+</ul>
+<div class="tab-content"><div id="yw3_tab_1" class="tab-pane fade active in">
+
+
+<div class="card">
+	<div class="header">
+
+		<h4 class="title text-center">Capital Market Institutions</h4>
+		<br>
+		<form class="form-horizontal" id="cmi-search-form" action="http://cmprs.sec.gov.ph/index.php/site/index" method="get">
+		<div class="col-md-9">
+				<div class="row">
+				<div class="form-group"><label class="col-sm-3 control-label" for="BaseInstitution_searchCMI"></label><div class="col-sm-9"><input style="text-align:center" placeholder="Search for Company Name " class="form-control" name="BaseInstitution[searchCMI]" id="BaseInstitution_searchCMI" type="text"></div></div>
+				</div>
+
+							<div class="clearfix"></div>
+
+
+			<div id="advancedSearch" style="display:block" class="row">
+				<!--<div class="row"><h6 class="text-muted text-center">ADVANCED SEARCH</h6></div>-->
+
+				<div class="row">
+				
+
+				
+				
+								</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div class="form-actions text-center">
+			<button class="btn-fill btn btn-primary" id="cmiSearch" type="submit" name="yt0"><i class="fa fa-search"></i> Search</button>
+			<button class="btn-fill btn btn-default" id="mReset" type="submit" name="yt1">Clear Search</button>						</div>
+
+		<br>
+
+
+		</form>		<!-- <div class="col-sm-6 col-md-6 col-md-offset-5 col-md-2 col-sm-2">
+			<label class="checkbox" for="checkbox1">
+				<input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+				Advanced Search
+			</label>
+		</div> -->
+	</div>
+
+	<div class="clearfix"></div>
+		<div class="content table-responsive table-full-width">
+		<div id="base-institution-list-grid" class="grid-view">
+<div class="no-class"><div><ul class="pagination pull-right" id="yw1"><li class="first disabled"><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid">&lt;&lt; First</a></li>
+<li class="previous disabled"><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid">«</a></li>
+<li class=" active"><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid">1</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=2">2</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=3">3</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=4">4</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=5">5</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=6">6</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=7">7</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=8">8</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=9">9</a></li>
+<li class=""><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=10">10</a></li>
+<li class="next"><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=2">»</a></li>
+<li class="last"><a href="http://cmprs.sec.gov.ph/index.php/site/index?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid&amp;BaseInstitution_page=13">Last &gt;&gt;</a></li></ul><div style="clear: both;"></div></div></div>
+<div class="summary">Displaying 1-15 of 189 results.</div>
+<table class="items table table-bordered table-striped table-hover">
+<thead>
+<tr>
+<th id="base-institution-list-grid_c0">#</th><th id="base-institution-list-grid_c1">Name</th><th id="base-institution-list-grid_c2">License</th><th id="base-institution-list-grid_c3">Certificate Registration No.</th><th class="button-column" id="base-institution-list-grid_c4">Details</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td><td>1INFINITY TRADERS SECURITIES CORP.</td><td></td><td>01-2016-00280</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb233b" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=D6F1C701-0FB7-41AE-B4C5-5091DF4D8004"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even selected">
+<td>2</td><td>A.T. DE CASTRO SECURITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00002</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb5262" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=0269FEC6-75C0-4FD1-B0AC-5A809A739416"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>3</td><td>AAA SOUTHEAST EQUITIES, INC.</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00003</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb5f5c" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=037F1151-18D1-42E1-B65D-88E969C878C3"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even">
+<td>4</td><td>AB CAPITAL SECURITIES INC.</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00004</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb6be5" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=A070A460-9E1A-46F6-B066-C0F4194F015C"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>5</td><td>ABACUS SECURITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00005</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb78b7" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=FE2D17C1-05BB-4270-8EE0-D4D6B2BEDED6"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even">
+<td>6</td><td>ALAKOR SECURITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00008</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb854a" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=EDE21A48-9D96-40D5-B393-C31C3418A05B"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>7</td><td>ALPHA SECURITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00009</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5eb91c7" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=BF928B76-1D5F-4CD9-A732-E9120D7C00A7"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even">
+<td>8</td><td>AP SECURITIES INCORPORATED</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00011</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ebc1cf" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=7625D55F-821A-4E07-B37D-6C27CB4CB981"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>9</td><td>APEX (PHILIPPINES) EQUITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00013</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ebd47a" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=A551B998-716D-4033-8575-E4CDE75EC781"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even">
+<td>10</td><td>ARMSTRONG SECURITIES, INC.</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00014</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ebe186" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=9BBC7470-E6E0-4880-8C6D-F73EBC8978F6"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>11</td><td>ASIASEC EQUITIES INC.</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00016</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ebee27" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=9D85221A-102F-4DB6-84DA-2A7E6A483C22"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even">
+<td>12</td><td>ASTRA SECURITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00017</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ebfaa2" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=3EF941AB-8480-4783-B16C-B14E138094C7"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>13</td><td>CHINA BANK SECURITIES CORPORATION</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00018</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ec093b" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=21B6D100-42B4-4620-8312-30D22E022D59"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="even">
+<td>14</td><td>AURORA SECURITIES, INC.</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00020</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ec15c1" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=68B294EE-B2CB-4D47-A3D6-51A28726AB41"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+<tr class="odd">
+<td>15</td><td>B A SECURITIES, INC.</td><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td><td>01-2004-00021</td><td class="button-column"><a class="btn btn-fill btn-warning btn-sm" title="view details" id="5ab8bf5ec2244" data-toggle="tooltip" href="http://cmprs.sec.gov.ph/index.php/institution/view?gid=9DDECB2C-8E61-405E-B9C4-AA56347C4F97"><i class="glyphicon glyphicon-folder-open"></i></a></td></tr>
+</tbody>
+</table>
+<div class="keys" style="display:none" title="/?BaseInstitution%5BsearchCMI%5D=A&amp;ajax=base-institution-list-grid"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span></div>
+</div>
+	</div>
+</div>
+</div><div id="yw3_tab_2" class="tab-pane fade">
+<div class="card">
+	<div class="header">
+				<h4 class="title text-center">Capital Market Professionals</h4>
+				<br>
+
+				<!--Form Attributes-->
+				<form class="form-horizontal" id="cmp-search-form" action="http://cmprs.sec.gov.ph/index.php/site/index" method="get">				<!--Form Attributes-->
+					<div class="col-md-9">
+						<div class="">
+						
+						<div class="form-group"><label class="col-sm-3 control-label" for="BaseProfessional_slname"></label><div class="col-sm-9"><input placeholder="Search for Last Name " class="form-control" name="BaseProfessional[slname]" id="BaseProfessional_slname" type="text"><span class="help-block">Search for Last Name</span></div></div>						<div class="form-group"><label class="col-sm-3 control-label" for="BaseProfessional_sfname"></label><div class="col-sm-9"><input placeholder="Search for First Name " class="form-control" name="BaseProfessional[sfname]" id="BaseProfessional_sfname" type="text"><span class="help-block">Search for First Name</span></div></div>
+							
+						</div>
+					</div>
+				<div class="col-md-9">
+				<!--Search Textfield-->
+						
+						<!--Search Textfield-->
+						
+
+
+
+						<div id="advancedSearch2" style="display:none" class="row">
+							<div class="row">
+							<div class="form-group"><label class="col-sm-3 control-label" for="BaseProfessional_searchLicenseType">Search License Type</label><div class="col-sm-9"><select class="form-control" placeholder="Search License Type" name="BaseProfessional[searchLicenseType]" id="BaseProfessional_searchLicenseType">
+<option value="">Select License Type</option>
+<option value="0">ALL</option>
+<option value="12">Associated Person</option>
+<option value="13">Compliance Officer</option>
+<option value="14">Salesman</option>
+<option value="15">Fixed Income Market Salesman</option>
+<option value="16">Certified Investment Solicitor</option>
+</select></div></div>								<div class="form-group"><label class="col-sm-3 control-label" for="BaseProfessional_searchRegion">Search Region</label><div class="col-sm-9"><select class="form-control" placeholder="Search Region" name="BaseProfessional[searchRegion]" id="BaseProfessional_searchRegion">
+<option value="">Select Region</option>
+<option value="1">REGION I (ILOCOS REGION)</option>
+<option value="2">REGION II (CAGAYAN VALLEY)</option>
+<option value="3">REGION III (CENTRAL LUZON)</option>
+<option value="4">REGION IV-A (CALABARZON)</option>
+<option value="5">REGION IV-B (MIMAROPA)</option>
+<option value="6">REGION V (BICOL REGION)</option>
+<option value="7">REGION VI (WESTERN VISAYAS)</option>
+<option value="8">REGION VII (CENTRAL VISAYAS)</option>
+<option value="9">REGION VIII (EASTERN VISAYAS)</option>
+<option value="10">REGION IX (ZAMBOANGA PENINSULA)</option>
+<option value="11">REGION X (NORTHERN MINDANAO)</option>
+<option value="12">REGION XI (DAVAO REGION)</option>
+<option value="13">REGION XII (SOCCSKSARGEN)</option>
+<option value="14">NATIONAL CAPITAL REGION (NCR)</option>
+<option value="15">CORDILLERA ADMINISTRATIVE REGION (CAR)</option>
+<option value="16">AUTONOMOUS REGION IN MUSLIM MINDANAO (ARMM)</option>
+<option value="17">REGION XIII (Caraga)</option>
+</select></div></div>
+								<div class="form-group"><label class="col-sm-3 control-label" for="BaseProfessional_searchProvince">Search Province</label><div class="col-sm-9"><select class="form-control" placeholder="Search Province" name="BaseProfessional[searchProvince]" id="BaseProfessional_searchProvince">
+<option value="">Select Province</option>
+</select></div></div>
+								<div class="form-group"><label class="col-sm-3 control-label" for="BaseProfessional_searchCitymun">Search Citymun</label><div class="col-sm-9"><select class="form-control" placeholder="Search Citymun" name="BaseProfessional[searchCitymun]" id="BaseProfessional_searchCitymun">
+<option value="">Select City/Municipality</option>
+</select></div></div>							</div>
+						</div>
+				</div>
+		<div class="clearfix"></div>
+
+		<!--Call Functions of Buttons-->
+		<div class="form-actions text-center">
+			<button class="btn-fill btn btn-primary" id="cmpSearch" type="submit" name="yt2"><i class="fa fa-search"></i> Search</button>
+			<button class="btn-fill btn btn-default" id="pReset" type="submit" name="yt3">Clear Search</button>				</div>
+		<!--Call Functions of Buttons-->
+
+		<br>
+
+		</form><!--Form End Widget-->
+
+		<!--Checkbox for Advance Search-->
+		<!-- <div class="col-sm-6 col-md-6 col-md-offset-5 col-md-2 col-sm-2">
+			<label class="checkbox" for="checkbox2">
+				<input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+				Advanced Search
+			</label>
+		</div> -->
+		<!--Checkbox for Advance Search-->
+</div>
+<div class="clearfix"></div>
+
+
+
+
+<!--CODE FOR THE TABLE-->
+<div class="content table-responsive table-full-width">
+<div id="base-professional-list-grid" class="grid-view">
+
+
+<span class="empty"><div class="text-center  "><span class="required">No record found in database.</span></div></span>
+<div class="keys" style="display:none" title="/"></div>
+</div></div>
+</div>
+<!--CODE FOR THE TABLE-->
+</div></div></div><div id="viewModal" class="modal fade in" style="display: block;" aria-hidden="false"><div class="modal-dialog modal-xl"><div class="modal-content">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h5 id="viewHeader">Capital Market Institution Details</h5>
+    </div>
+
+    <div class="modal-body">
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/jquery.ba-bbq.min.js.download"></script>
+
+<div class="text-center">
+
+	</div>
+
+
+<br>
+
+
+<div id="startPage">
+
+	<div class="panel panel-success"><div class="panel-heading"><span class="glyphicon glyphicon-th-list"></span> <h3 class="panel-title" style="display: inline;">Institution Details</h3><div class="clearfix"></div></div><div id="yw0">		<table class="detail-view table table-striped table-condensed" id="yw1"><tbody><tr class="odd"><th>Name</th><td>A.T. DE CASTRO SECURITIES CORPORATION</td></tr>
+<tr class="even"><th>Former Name</th><td></td></tr>
+<tr class="odd"><th>Certificate Registration No.</th><td>01-2004-00002</td></tr>
+<tr class="even"><th>License</th><td><i class="fa fa-angle-right fa-fw"></i> Broker/Dealer in Securities (BD)<br></td></tr>
+<tr class="odd"><th>Last Annual Fee Payment</th><td>Nov. 17, 2017 (BD license)<br></td></tr>
+</tbody></table>		</div></div>
+</div>
+
+<div id="startPage">
+	<div class="panel panel-success"><div class="panel-heading"><span class="glyphicon glyphicon-user"></span> <h3 class="panel-title" style="display: inline;">List of Capital Market Professionals</h3><div class="clearfix"></div></div><div id="yw2">
+<div class="content table-responsive">
+<div id="base-professional1-list-grid" class="grid-view">
+<div class="summary">Total 10 results.</div>
+<table class="items table table-striped">
+<thead>
+<tr>
+<th id="base-professional1-list-grid_c0">#</th><th id="base-professional1-list-grid_c1">Name</th><th id="base-professional1-list-grid_c2">Certificate Registration No.</th><th id="base-professional1-list-grid_c3">License</th><th id="base-professional1-list-grid_c4">Last Annual Payment Date</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td><td>DONATO JR, EMILIO BERMEJO</td><td>02-2015-10452</td><td>Associated Person</td><td>2017-11-17</td></tr>
+<tr class="even">
+<td>2</td><td>OLETA, RICHARD CASTRO</td><td>02-2004-00625</td><td>Associated Person</td><td>2017-11-17</td></tr>
+<tr class="odd">
+<td>3</td><td>BANSON, REGINA DE CASTRO</td><td>02-2007-02200</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="even">
+<td>4</td><td>DE CASTRO JR, RAYMUNDO TRINIDAD</td><td>02-2004-00251</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="odd">
+<td>5</td><td>DE CASTRO, MARIO JONAS DONATO</td><td>02-2004-00248</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="even">
+<td>6</td><td>DE CASTRO, RAUL MARIANO DONATO</td><td>02-2004-00249</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="odd">
+<td>7</td><td>DE CASTRO, SALUD DONATO</td><td>02-2004-00250</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="even">
+<td>8</td><td>DONATO, BASILIO ANTONIO BENETUA</td><td>02-2004-00299</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="odd">
+<td>9</td><td>SAMONTE SR, ALFREDO DAYAWON</td><td>02-2004-00733</td><td>Salesman</td><td>2017-11-17</td></tr>
+<tr class="even">
+<td>10</td><td>STO. DOMINGO, RAMON LUIS COOTAUCO</td><td>02-2004-00963</td><td>Salesman</td><td>2017-11-17</td></tr>
+</tbody>
+</table>
+<div class="keys" style="display:none" title="/index.php/institution/view?gid=0269FEC6-75C0-4FD1-B0AC-5A809A739416"><span>103</span><span>104</span><span>105</span><span>106</span><span>107</span><span>108</span><span>109</span><span>110</span><span>111</span><span>112</span></div>
+</div></div>
+		</div></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery('#base-professional1-list-grid').yiiGridView({'ajaxUpdate':['base\x2Dprofessional1\x2Dlist\x2Dgrid'],'ajaxVar':'ajax','pagerClass':'no\x2Dclass','loadingClass':'grid\x2Dview\x2Dloading','filterClass':'filters','tableClass':'items\x20table\x20table\x2Dstriped','selectableRows':1,'enableHistory':false,'updateSelector':'\x7Bpage\x7D,\x20\x7Bsort\x7D','filterSelector':'\x7Bfilter\x7D','afterAjaxUpdate':function() {
+			jQuery('.popover').remove();
+			jQuery('[data-toggle=popover]').popover();
+			jQuery('.tooltip').remove();
+			jQuery('[data-toggle=tooltip]').tooltip();
+		}});
+/*]]>*/
+</script>
+</div></div>
+ 
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" id="yw5" name="yt4" type="button">Close</button>    </div>
+
+</div></div></div></div><!-- content -->
+
+    </div>
+    <div class="space"></div>
+<!-- end container -->
+</div>
+
+<!-- end main -->
+<a id="back-to-top" href="http://cmprs.sec.gov.ph/#" class="btn btn-primary btn-lg back-to-top" role="button" title="" data-toggle="tooltip" data-placement="left" style="display:none;" data-original-title=""><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 footerleft ">
+        <div class="logofooter"><a href="http://www.sec.gov.ph/"><img src="./Capital Market Participants Registry System_files/logo.png" alt="success" height="180" width="auto"></a></div>
+        <p><i class="fa fa-map-marker"></i>Secretariat Building, PICC Complex, Roxas Boulevard, Pasay City, 1307 </p>
+        <p><i class="fa fa-phone"></i> Phone (CRMD) : (+632) 818-5554</p>
+        <!-- <p><i class="fa fa-envelope"></i> i-Message Mo :</p> -->
+
+      </div>
+      <div class="col-md-5 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="http://www.sec.gov.ph/"> SEC Website</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/reserve-company-name/"> i-Message Mo</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/search-registered-companies/"> Reserve a Company Name</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/search-registered-companies/"> Search Registered Companies</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/sec-i-view/"> SEC i-View</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/sec-express-system/"> SEC Express System</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/sec-express-nationwide-submission/"> SEC Express Nationwide Submission</a></li>
+          <li><a href="http://www.sec.gov.ph/online-services/registration-calculator-2/"> Registration Calculator</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2017 Securities and Exchange Commission </p>
+    </div>
+    <!-- <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a href="#">webenlance.com</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Faq's</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Site Map</a></li>
+      </ul>
+    </div> -->
+  </div>
+</div>
+
+<script type="text/javascript" src="./Capital Market Participants Registry System_files/jquery.yiigridview.js.download"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('[data-toggle=popover]').popover();
+jQuery('[data-toggle=tooltip]').tooltip();
+jQuery('#yw0_0 .alert').alert();
+
+
+	$('#checkbox1').prop('checked', false);
+
+	$('#mReset').click(function(){
+		$('#cmi-search-form').trigger('reset');
+		$('#cmiSearch').click();
+		return false;
+	});
+
+	$('#cmi-search-form').submit(function(){
+
+		swal({
+		  title: 'Searching...',
+		  text: 'Please Wait.',
+		  type: 'info',
+		  showCancelButton: false,
+			showConfirmButton: false,
+		  //timer: 1000
+		}).then(
+		  function () {
+		  },
+		  // handling the promise rejection
+		  function (dismiss) {
+
+
+			if (dismiss === 'timer') {
+			  // $('html,body').animate({
+				// scrollTop: $('#cmiSearch').offset().top
+				// },500,'linear');
+
+			}
+		  }
+		)
+
+		$.fn.yiiGridView.update('base-institution-list-grid', {
+		data: $(this).serialize()
+		});
+
+
+
+		return false;
+	});
+
+	$('#checkbox1').change('toggle', function() {
+
+		$('#advancedSearch').slideToggle();
+	});
+
+
+jQuery(document).on('click','#base-institution-list-grid a.btn.btn-fill.btn-warning.btn-sm',function(){
+								var target = "#viewModal";
+								var url = $(this).attr("href");
+								var header = "Capital Market Institution Details";
+								$(".modal-body").html("Loading...Please Wait.");
+								if(url){
+								  $(target).find(".modal-body").load(url);
+								  $("#viewHeader").html(header);
+								  $("#viewModal").modal("toggle");
+								  }
+								  return false;
+								  });
+jQuery('#base-institution-list-grid').yiiGridView({'ajaxUpdate':['base\x2Dinstitution\x2Dlist\x2Dgrid'],'ajaxVar':'ajax','pagerClass':'no\x2Dclass','loadingClass':'grid\x2Dview\x2Dloading','filterClass':'filters','tableClass':'items\x20table\x20table\x2Dbordered\x20table\x2Dstriped\x20table\x2Dhover','selectableRows':1,'enableHistory':false,'updateSelector':'\x7Bpage\x7D,\x20\x7Bsort\x7D','filterSelector':'\x7Bfilter\x7D','pageVar':'BaseInstitution_page','afterAjaxUpdate':function(){
+				swal.close();
+			}});
+
+
+	$('#checkbox2').prop('checked', false);
+
+
+	$('#pReset').click(function(){
+		$('#cmp-search-form').trigger('reset');
+		$('#cmpSearch').click();
+		return false;
+	});
+
+	$('#cmp-search-form').submit(function(){
+
+		swal({
+		  title: 'Searching...',
+		  text: 'Please Wait.',
+		  type: 'info',
+		  showCancelButton: false,
+		  showConfirmButton: false,
+		  timer: 1000
+		}).then(
+		  function () {
+
+		  },
+		  // handling the promise rejection
+		  function (dismiss) {
+			if (dismiss === 'timer') {
+			  // console.log('I was closed by the timer');
+			  // $('html,body').animate({
+				// scrollTop: $('#base-professional-list-grid').offset().top
+				// },500,'linear');
+			}
+		  }
+		)
+		$.fn.yiiGridView.update('base-professional-list-grid', {
+		data: $(this).serialize()
+		});
+		return false;
+	});
+
+	// $(':checkbox').on('toggle', function() {
+	//
+	// 	$('#advancedSearch').toggle('slow', function() {
+	// 		// Animation complete.
+	// 	});
+	// });
+
+	$('#checkbox2').change('toggle', function() {
+
+		$('#advancedSearch2').slideToggle();
+	});
+
+
+jQuery('body').on('change','#BaseProfessional_searchRegion',function(){jQuery.ajax({'type':'POST','url':'\x2Findex.php\x2Fprovince\x2FdynamicProvince','data':{'showPrompt':'1','region_id':this.value},'cache':false,'success':function(html){jQuery("#BaseProfessionalList_searchProvince").html(html)}});return false;});
+jQuery('body').on('change','#BaseProfessional_searchProvince',function(){jQuery.ajax({'type':'POST','url':'\x2Findex.php\x2Fcitymun\x2FdynamicCitymun','data':{'showPrompt':'1','province_id':this.value},'cache':false,'success':function(html){jQuery("#BaseProfessionalList_searchCitymun").html(html)}});return false;});
+jQuery(document).on('click','#base-professional-list-grid a.btn.btn-fill.btn-warning.btn-sm',function(){
+						var target = "#viewModal";
+						var url = $(this).attr("href");
+						var header = "Capital Market Professional Details";
+						$(".modal-body").html("Loading...Please Wait.");
+						if(url){
+						  $(target).find(".modal-body").load(url);
+						  $("#viewHeader").html(header);
+						  $("#viewModal").modal("toggle");
+						  }
+						  return false;
+						  });
+jQuery('#base-professional-list-grid').yiiGridView({'ajaxUpdate':['base\x2Dprofessional\x2Dlist\x2Dgrid'],'ajaxVar':'ajax','pagerClass':'no\x2Dclass','loadingClass':'grid\x2Dview\x2Dloading','filterClass':'filters','tableClass':'items\x20table\x20table\x2Dstriped','selectableRows':1,'enableHistory':false,'updateSelector':'\x7Bpage\x7D,\x20\x7Bsort\x7D','filterSelector':'\x7Bfilter\x7D','pageVar':'BaseProfessional_page','afterAjaxUpdate':function() {
+			jQuery('.popover').remove();
+			jQuery('[data-toggle=popover]').popover();
+			jQuery('.tooltip').remove();
+			jQuery('[data-toggle=tooltip]').tooltip();
+		}});
+jQuery('#yw3').tab('show');
+jQuery('#viewModal').modal({'backdrop':'static','show':false});
+jQuery('#login-form').yiiactiveform({'validateOnSubmit':true,'afterValidate':function(form, data, hasError) {
+
+                  if (!hasError){
+                      str = $("#login-form").serialize() + "&ajax=login-form";
+
+                      $.ajax({
+                          type: "POST",
+                          url: "/index.php/site/loginAjax",
+                          data: str,
+                          dataType: "json",
+                          beforeSend : function() {
+                              $("#login").attr("disabled",true);
+                          },
+                          success: function(data, status) {
+
+                              if(data.authenticated)
+                              {
+                                 window.location = data.redirectUrl;
+                                //  alert("hokey");
+                              }
+                              else
+                              {
+                                  $.each(data, function(key, value) {
+                                      var div = "#"+key+"_em_";
+                                      $(div).text(value);
+                                      $(div).show();
+                                  });
+                                  $("#login").attr("disabled",false);
+                              }
+                          },
+                      });
+                      return false;
+                  }
+              },'errorCssClass':'has\x2Derror','successCssClass':'has\x2Dsuccess','inputContainer':'div.form\x2Dgroup','attributes':[{'id':'LoginForm_username','inputID':'LoginForm_username','errorID':'LoginForm_username_em_','model':'LoginForm','name':'username','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("Username cannot be blank.");
+}
+
+}},{'id':'LoginForm_password','inputID':'LoginForm_password','errorID':'LoginForm_password_em_','model':'LoginForm','name':'password','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("Password cannot be blank.");
+}
+
+}}],'errorCss':'error'});
+});
+/*]]>*/
+</script>
+
+
+
+<script src="./Capital Market Participants Registry System_files/addons.js.download"></script>
+<script src="./Capital Market Participants Registry System_files/carousel.js.download"></script>
+<script src="./Capital Market Participants Registry System_files/bootstrap-notify.min.js.download"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script> -->
+<!-- <script src="/js/swal/sweetalert2.js"></script> -->
+<script src="./Capital Market Participants Registry System_files/sweetalert2.min.js.download"></script>
+<!-- <script src="/assets/CreativeLinkEffects/js/modernizr.custom.js"></script> -->
+
+<!-- <script>
+$(function() {
+    $('.navbar-brand').focus();
+		setTimeout(function(){
+		  $('.navbar-brand').blur()
+		}, 1000);
+
+});
+</script> -->
+
+
+<div class="modal-backdrop fade in"></div></body></html>
